@@ -10,20 +10,31 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { storeFreeze } from 'ngrx-store-freeze';
+import { clientHomeRoutes, ClientHomeModule } from '@nxt/client/home';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(
+      [
+        { path: 'client-home', children: clientHomeRoutes },
+        {
+          path: 'client-auth',
+          loadChildren: '@nxt/client/auth#ClientAuthModule'
+        }
+      ],
+      { initialNavigation: 'enabled' }
+    ),
     StoreModule.forRoot(
       {},
       { metaReducers: !environment.production ? [storeFreeze] : [] }
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule
+    StoreRouterConnectingModule,
+    ClientHomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

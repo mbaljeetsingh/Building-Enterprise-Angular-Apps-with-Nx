@@ -4,11 +4,6 @@
     "outDir": "../../dist/out-tsc/apps/admin",
     "types": []
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
-  ],
-  "include": [
-    "**/*.ts"
-  ]
+  "exclude": ["test.ts", "**/*.spec.ts"],
+  "include": ["**/*.ts"]
 }

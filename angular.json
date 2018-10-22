@@ -278,6 +278,62 @@
           }
         }
       }
+    },
+    "client-home": {
+      "root": "libs/client/home",
+      "sourceRoot": "libs/client/home/src",
+      "projectType": "library",
+      "prefix": "nxt",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/client/home/src/test.ts",
+            "tsConfig": "libs/client/home/tsconfig.spec.json",
+            "karmaConfig": "libs/client/home/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/client/home/tsconfig.lib.json",
+              "libs/client/home/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "client-auth": {
+      "root": "libs/client/auth",
+      "sourceRoot": "libs/client/auth/src",
+      "projectType": "library",
+      "prefix": "nxt",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/client/auth/src/test.ts",
+            "tsConfig": "libs/client/auth/tsconfig.spec.json",
+            "karmaConfig": "libs/client/auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/client/auth/tsconfig.lib.json",
+              "libs/client/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

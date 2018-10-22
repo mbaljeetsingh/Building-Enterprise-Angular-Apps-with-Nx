@@ -22,6 +22,12 @@
     },
     "admin-dashboard": {
       "tags": []
+    },
+    "client-home": {
+      "tags": []
+    },
+    "client-auth": {
+      "tags": []
     }
   }
 }

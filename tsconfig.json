@@ -18,6 +18,12 @@
     "paths": {
       "@nxt/admin/dashboard": [
         "libs/admin/dashboard/src/index.ts"
+      ],
+      "@nxt/client/home": [
+        "libs/client/home/src/index.ts"
+      ],
+      "@nxt/client/auth": [
+        "libs/client/auth/src/index.ts"
       ]
     }
   },
