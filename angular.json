@@ -22,13 +22,8 @@
             "main": "apps/admin/src/main.ts",
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
-            "assets": [
-              "apps/admin/src/favicon.ico",
-              "apps/admin/src/assets"
-            ],
-            "styles": [
-              "apps/admin/src/styles.scss"
-            ],
+            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+            "styles": ["apps/admin/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -54,7 +49,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "admin:build"
+            "browserTarget": "admin:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
@@ -75,14 +71,9 @@
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.spec.json",
             "karmaConfig": "apps/admin/karma.conf.js",
-            "styles": [
-              "apps/admin/src/styles.scss"
-            ],
+            "styles": ["apps/admin/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "apps/admin/src/favicon.ico",
-              "apps/admin/src/assets"
-            ]
+            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"]
           }
         },
         "lint": {
@@ -92,9 +83,7 @@
               "apps/admin/tsconfig.app.json",
               "apps/admin/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -119,9 +108,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/admin-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -145,13 +132,8 @@
             "main": "apps/client/src/main.ts",
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
-            "assets": [
-              "apps/client/src/favicon.ico",
-              "apps/client/src/assets"
-            ],
-            "styles": [
-              "apps/client/src/styles.scss"
-            ],
+            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+            "styles": ["apps/client/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -177,7 +159,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "client:build"
+            "browserTarget": "client:build",
+            "port": 4201
           },
           "configurations": {
             "production": {
@@ -198,14 +181,9 @@
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.spec.json",
             "karmaConfig": "apps/client/karma.conf.js",
-            "styles": [
-              "apps/client/src/styles.scss"
-            ],
+            "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "apps/client/src/favicon.ico",
-              "apps/client/src/assets"
-            ]
+            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"]
           }
         },
         "lint": {
@@ -215,9 +193,7 @@
               "apps/client/tsconfig.app.json",
               "apps/client/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -242,9 +218,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/client-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
