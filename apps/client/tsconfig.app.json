@@ -5,5 +5,5 @@
     "types": []
   },
   "exclude": ["test.ts", "**/*.spec.ts"],
-  "include": ["**/*.ts", , "../../libs/client/auth/src/index.ts"]
+  "include": ["**/*.ts", "../../libs/client/auth/src/index.ts"]
 }

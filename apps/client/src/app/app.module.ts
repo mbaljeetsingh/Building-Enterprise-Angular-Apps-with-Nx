@@ -19,9 +19,9 @@ import { clientHomeRoutes, ClientHomeModule } from '@nxt/client/home';
     NxModule.forRoot(),
     RouterModule.forRoot(
       [
-        { path: 'client-home', children: clientHomeRoutes },
+        { path: 'home', children: clientHomeRoutes },
         {
-          path: 'client-auth',
+          path: 'auth',
           loadChildren: '@nxt/client/auth#ClientAuthModule'
         }
       ],
