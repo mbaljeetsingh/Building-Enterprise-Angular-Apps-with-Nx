@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@nxt/admin/dashboard": [
+        "libs/admin/dashboard/src/index.ts"
+      ]
     }
   },
   "exclude": [
