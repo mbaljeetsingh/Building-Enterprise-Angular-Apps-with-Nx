@@ -32,7 +32,7 @@ export class AuthEffects {
 
   constructor(
     private actions$: Actions,
-    private dataPersistence: DataPersistence<AuthPartialState>,
+    private dataPersistence: DataPersistence<AuthState>,
     private authService: AuthService
   ) {}
 }
