@@ -14,8 +14,7 @@ export const AUTH_FEATURE_KEY = 'auth';
 export interface Entity {}
 
 export interface AuthState {
-  list: Entity[]; // list of Auth; analogous to a sql normalized table
-  selectedId?: string | number; // which Auth record has been selected
+  user: any;
   loaded: boolean; // has the Auth list been loaded
   error?: any; // last none error (if any)
 }
@@ -25,7 +24,7 @@ export interface AuthPartialState {
 }
 
 export const initialState: AuthState = {
-  list: [],
+  user: null,
   loaded: false
 };
 
@@ -34,10 +33,10 @@ export function authReducer(
   action: AuthAction
 ): AuthState {
   switch (action.type) {
-    case AuthActionTypes.AuthLoaded: {
+    case AuthActionTypes.LoginSuccess: {
       state = {
         ...state,
-        list: action.payload,
+        user: action.payload,
         loaded: true
       };
       break;

@@ -2,29 +2,29 @@ import { Action } from '@ngrx/store';
 import { Entity } from './auth.reducer';
 
 export enum AuthActionTypes {
-  LoadAuth = '[Auth] Load Auth',
-  AuthLoaded = '[Auth] Auth Loaded',
-  AuthLoadError = '[Auth] Auth Load Error'
+  Login = '[Auth] Login',
+  LoginSuccess = '[Auth] Login Success',
+  LoginError = '[Auth] Login Error'
 }
 
-export class LoadAuth implements Action {
-  readonly type = AuthActionTypes.LoadAuth;
+export class Login implements Action {
+  readonly type = AuthActionTypes.Login;
 }
 
-export class AuthLoadError implements Action {
-  readonly type = AuthActionTypes.AuthLoadError;
+export class LoginSuccess implements Action {
+  readonly type = AuthActionTypes.LoginSuccess;
   constructor(public payload: any) {}
 }
 
-export class AuthLoaded implements Action {
-  readonly type = AuthActionTypes.AuthLoaded;
-  constructor(public payload: Entity[]) {}
+export class LoginError implements Action {
+  readonly type = AuthActionTypes.LoginError;
+  constructor(public payload: any) {}
 }
 
-export type AuthAction = LoadAuth | AuthLoaded | AuthLoadError;
+export type AuthAction = Login | LoginSuccess | LoginError;
 
 export const fromAuthActions = {
-  LoadAuth,
-  AuthLoaded,
-  AuthLoadError
+  Login,
+  LoginSuccess,
+  LoginError
 };

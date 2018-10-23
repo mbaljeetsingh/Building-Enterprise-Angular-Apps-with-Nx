@@ -1,1 +1,5 @@
 <button (click)="signin()">Signin/Login</button>
+
+<div *ngIf="user | async">
+  <h1>User is Logged in ({{(user | async).email}}!)</h1>
+</div>
