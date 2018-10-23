@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { clientHomeRoutes, ClientHomeModule } from '@nxt/client/home';
+import { SharedModule } from '@nxt/shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +35,8 @@ import { clientHomeRoutes, ClientHomeModule } from '@nxt/client/home';
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
-    ClientHomeModule
+    ClientHomeModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

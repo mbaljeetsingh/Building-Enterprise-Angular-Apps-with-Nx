@@ -28,6 +28,9 @@
     },
     "client-auth": {
       "tags": []
+    },
+    "shared": {
+      "tags": []
     }
   }
 }

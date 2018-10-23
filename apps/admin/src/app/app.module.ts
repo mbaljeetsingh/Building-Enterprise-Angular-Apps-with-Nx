@@ -14,6 +14,7 @@ import {
   adminDashboardRoutes,
   AdminDashboardModule
 } from '@nxt/admin/dashboard';
+import { SharedModule } from '@nxt/shared';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +32,8 @@ import {
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
-    AdminDashboardModule
+    AdminDashboardModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

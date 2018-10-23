@@ -24,6 +24,9 @@
       ],
       "@nxt/client/auth": [
         "libs/client/auth/src/index.ts"
+      ],
+      "@nxt/shared": [
+        "libs/shared/src/index.ts"
       ]
     }
   },
